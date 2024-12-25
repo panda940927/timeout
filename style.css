@@ -1,39 +1,119 @@
 body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: Arial, sans-serif;
+    background-image: url('./assets/track1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  #game {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 1rem;
     text-align: center;
-    background-color: #000;
-    color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  h1 {
+    color: #ff1801;
+    margin-bottom: 2rem;
   }
   
   #lights {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
+    gap: 1rem;
+    margin: 2rem 0;
   }
   
   .light {
     width: 50px;
     height: 50px;
-    background-color: grey;
     border-radius: 50%;
+    background-color: #333;
+    border: 3px solid #666;
+    transition: background-color 0.2s ease;
   }
   
   .light.active {
-    background-color: red;
+    background-color: #ff0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
   }
   
   #timer {
-    font-size: 2rem;
-    margin: 20px 0;
+    font-size: 3rem;
+    margin: 2rem 0;
+    color: #00ff00;
   }
   
   button {
-    padding: 10px 20px;
-    margin: 10px;
-    font-size: 1rem;
+    background-color: #ff1801;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 1rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #cc1401;
   }
   
   #leaderboard {
-    margin-top: 20px;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+  }
+  
+  #scores {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #scores li {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  #scores li:last-child {
+    border-bottom: none;
+  }
+  
+  #instructions {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+  
+  @media (max-width: 600px) {
+    #game {
+      padding: 1rem;
+      margin: 1rem;
+      width: 90%;
+    }
+    
+    .light {
+      width: 40px;
+      height: 40px;
+    }
+    
+    #timer {
+      font-size: 2rem;
+    }
+    
+    button {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+    }
   }
