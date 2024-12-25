@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  #lights {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .light {
+    width: 50px;
+    height: 50px;
+    background-color: grey;
+    border-radius: 50%;
+  }
+  
+  .light.active {
+    background-color: red;
+  }
+  
+  #timer {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1rem;
+  }
+  
+  #leaderboard {
+    margin-top: 20px;
+  }
