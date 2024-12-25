@@ -1,31 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>F1 反應速度計時器</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 反應速度計時器</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="game">
-    <h1>F1 反應速度計時器</h1>
-    <div id="lights">
-      <!-- 模擬五個燈 -->
-      <div class="light"></div>
-      <div class="light"></div>
-      <div class="light"></div>
-      <div class="light"></div>
-      <div class="light"></div>
+    <div id="game">
+        <h1>F1 反應速度計時器</h1>
+        <div id="lights">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+        <p id="instructions">請等待燈滅後按空白鍵或點擊螢幕！</p>
+        <h2 id="timer">0.000 秒</h2>
+        <div class="button-group">
+            <button id="restart">開始</button>
+            <button id="username-btn">設置名稱</button>
+        </div>
+        <div id="leaderboard">
+            <h2>全球排行榜</h2>
+            <ul id="scores"></ul>
+        </div>
+        <!--<button id="change-background">更換背景</button>-->
     </div>
-    <p id="instructions">請等待燈滅後按空白鍵或點擊螢幕！</p>
-    <h2 id="timer">0.000 秒</h2>
-    <button id="restart">開始</button>
-    <div id="leaderboard">
-      <h2>排行榜</h2>
-      <ul id="scores"></ul>
-    </div>
-    <!--<button id="change-background">更換背景</button>-->
-  </div>
-  <script src="script.js"></script>
+    <!-- 注意這裡改成 type="module" -->
+    <script type="module" src="script.js"></script>
 </body>
 </html>
